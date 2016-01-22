@@ -9,38 +9,26 @@
                 <li class="nav-header">
                     <div class="dropdown profile-element">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Example user</strong>
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Lista de componentes</strong>
                              </span> <span class="text-muted text-xs block">user <b class="caret"></b></span> </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item 3</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
                         IN+
                     </div>
                 </li>
-                <li class="{{isActiveRoute regex='componente-2'}}">
-                    <!-- isso vai pintar automaticamente a que ta ativa-->
-                    <!--isso vai gerar um link pra rota que tem o nome componente-2 -->
-                    <a href="{{pathFor route='componente-2'}}">
-                        <i class="fa fa-dashboard"></i>
-                        <span class="nav-label">modifiquei o arquivo navigation.html</span>
-                    </a>
-                </li>
-                {{> menuItem regex='componente-3' route='componente-3' name='Componente 3' icon='fa fa-user'}}
-                {{> menuItem regex='componente-4' route='componente-4' name='Componente 4' icon='fa fa-star'}}
-                {{> menuItem regex='componente-5' route='componente-5' name='Componente 5' icon='fa fa-diamond'}} 
-                {{> menuItem regex='componente-6' route='componente-6' name='Componente 6'}}
-                <!-- mano pq vc usa essa porra de quebra de linha , tio, eu nao uso porra nenhuma, veio assim--> 
-
+                {{> menuItem regex='dashboard-stat' route='dashboard-stat' name='Dashboard Stat' icon='fa fa-home'}}
             </ul>
         </div>
     </nav>
 </template>
+
 <template name="menuItem">
     <li class="{{isActiveRoute regex=regex}}">
         <a href="{{pathFor route=route}}">
