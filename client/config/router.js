@@ -20,6 +20,12 @@ Router.route('/user-card', function () {
 	name: 'user-card'
 });
 
+Router.route('/simple-list-item', function () {
+    this.render('simpleListItemPage');
+},{
+	name: 'simple-list-item'
+});
+
 Router.route('/recent-updates', function () {
     this.render('recentUpdatesPage');
 },{

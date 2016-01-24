@@ -1,0 +1,29 @@
+/*The .simpleListItem simply holds a .feed-element */
+.simpleListItem {
+	list-style-type: none;
+	padding: 10px;
+
+	border-bottom: 1px solid #ddd; /*Tried to @border-color but just fits well with white bg-color*/
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+	
+	.feed-element{
+		padding-bottom: 0;
+
+		/*Applying these settings, so the image remains small, even if not a img with .img-circle class*/
+		img {
+			width: 38px;
+			height: 38px;
+			margin-top: 5px;
+		}
+	}
+
+	h5 {
+		font-size: 14px;
+		font-weight: 600;
+		margin: 5px 0;
+	}
+}
+
