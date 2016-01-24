@@ -12,24 +12,37 @@
    		</div>
    		<div class="ibox-content no-padding">
    			<ul class="list-group">
-					<!-- What must to be done is to configure that each element within this ul list will be a li .list-group-item and inside this li we set each parameter -->
+					<!-- What must to be done is to create a template for a single list item and inside this we set the parameters -->
+					{{>recentUpdatesItemTechnology user='mrandrade' icon='fa fa-apple' action='created a new description for' technology='drones' date='13/01/2016'}}
+					{{>recentUpdatesItemOrganization user='mrandrade' icon='fa fa-building' action='edited an organization' organization='microsoft' date='13/01/2016'}}
+					{{>recentUpdatesItemTechnology user='mrandrade' icon='fa fa-apple' action='created a new description for' technology='drones' date='13/01/2016'}}
+					{{>recentUpdatesItemOrganization user='mrandrade' icon='fa fa-building' action='edited an organization' organization='microsoft' date='13/01/2016'}}
+
+					<!-- This must be the last element inside this ul, so it fits with &:last-child selector in the css file-->
+					<!-- Furthermore, it would be wrong to exist another element after this one, since 'View more' should stay at the very end of recent updates -->
 					<li class="list-group-item">
-						<i class="fa fa-building"></i>
-						<p><a class="text-info" href="#">@mrandrade</a> created a new description for <a class="text-info" href="#">@drones</a> at 13/01/2016</p>
-					</li>
-					<li class="list-group-item">
-						<i class="fa fa-codepen"></i>
-						<p><a class="text-info" href="#">@mrandrade</a> created a new description for <a class="text-info" href="#">@drones</a> at 13/01/2016</p>					</li>
-					<li class="list-group-item">
-						<i class="fa fa-database"></i>
-						<p><a class="text-info" href="#">@mrandrade</a> created a new description for <a class="text-info" href="#">@drones</a> at 13/01/2016</p>
-					</li>
-					<li class="list-group-item ">
-						<i class="fa fa-empire"></i>
-						<p><a class="text-info" href="#">@mrandrade</a> created a new description for <a class="text-info" href="#">@drones</a> at 13/01/2016</p>
+						<a class="text-info" href="#">
+							<p>View more..</p>
+						</a>
 					</li>
          	</ul>
    		</div>
    	</div> 
    </div>
+</template>
+
+<!-- Creating the item list for Technology -->
+<template name="recentUpdatesItemTechnology">
+	<li class="list-group-item">
+		<i class="{{icon}}"></i>
+		<p><a class="text-info" href="#">@{{user}}</a> {{action}} <a class="text-info" href="#">@{{technology}}</a> at {{date}}</p>
+	</li>
+</template>
+
+<!-- Creating the item list for Organization -->
+<template name="recentUpdatesItemOrganization">
+	<li class="list-group-item">
+		<i class="{{icon}}"></i>
+		<p><a class="text-info" href="#">@{{user}}</a> {{action}} <a class="text-info" href="#">@{{organization}}</a> at {{date}}</p>
+	</li>
 </template>
