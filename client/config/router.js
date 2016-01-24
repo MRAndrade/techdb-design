@@ -14,20 +14,20 @@ Router.route('/dashboard-stat', function () {
 	name: 'dashboard-stat'
 });
 
-Router.route('/user-card', function () {
-    this.render('userCardPage');
+Router.route('/recent-updates', function () {
+    this.render('recentUpdatesPage');
 },{
-	name: 'user-card'
+	name: 'recent-updates'
 });
 
 Router.route('/simple-list-item', function () {
     this.render('simpleListItemPage');
 },{
-	name: 'simple-list-item'
+    name: 'simple-list-item'
 });
 
-Router.route('/recent-updates', function () {
-    this.render('recentUpdatesPage');
+Router.route('/user-card', function () {
+    this.render('userCardPage');
 },{
-	name: 'recent-updates'
+    name: 'user-card'
 });

@@ -7,26 +7,17 @@
             <!-- End offCanvas menu toggle -->
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
-                    <div class="dropdown profile-element">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Lista de componentes</strong>
-                             </span> <span class="text-muted text-xs block">user <b class="caret"></b></span> </span>
-                        </a>
-                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="#">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Item 3</a></li>
-                        </ul>
+                    <div class="profile-element">
+                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Lista de componentes</strong></span></span>    
                     </div>
                     <div class="logo-element">
-                        IN+
+                         ( ͡° ͜ʖ ͡°)
                     </div>
                 </li>
                 {{> menuItem regex='dashboard-stat' route='dashboard-stat' name='Dashboard Stat'}}
-                {{> menuItem regex='user-card' route='user-card' name='User Card'}}
-                {{> menuItem regex='simple-list-item' route='simple-list-item' name='Simple List Item'}}
                 {{> menuItem regex='recent-updates' route='recent-updates' name='Recent Updates'}}
+                {{> menuItem regex='simple-list-item' route='simple-list-item' name='Simple List Item'}}
+                {{> menuItem regex='user-card' route='user-card' name='User Card'}}
             </ul>
         </div>
     </nav>
