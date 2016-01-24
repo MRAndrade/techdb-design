@@ -14,6 +14,12 @@ Router.route('/dashboard-stat', function () {
 	name: 'dashboard-stat'
 });
 
+Router.route('/main-dashboard', function () {
+    this.render('mainDashboard');
+},{
+    name: 'main-dashboard'
+});
+
 Router.route('/recent-updates', function () {
     this.render('recentUpdatesPage');
 },{

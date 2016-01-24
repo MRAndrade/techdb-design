@@ -1,0 +1,22 @@
+<!-- Just setting grid inside it 'cause it's a complete screen component, but it's up to you the grid settings-->
+<template name="mainDashboard">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-lg-3">
+			{{>dashboardStat icon='fa fa-apple' entity='Technologies' records='300'}}
+		</div>
+		<div class="col-xs-12 col-sm-6 col-lg-3">
+			{{>dashboardStat icon='fa fa-columns' entity='Projects' records='140'}}
+		</div>
+		<div class="col-xs-12 col-sm-6 col-lg-3">
+			{{>dashboardStat icon='fa fa-building' entity='Organizations' records='212'}}
+		</div>
+		<div class="col-xs-12 col-sm-6 col-lg-3">
+			{{>dashboardStat icon='fa fa-file-o' entity='Attachments' records='360'}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			{{>recentUpdates}}
+		</div>
+	</div>
+</template>

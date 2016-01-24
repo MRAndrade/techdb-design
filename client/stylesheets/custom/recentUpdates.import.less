@@ -1,6 +1,8 @@
 .recentUpdates {
 	.list-group-item {
+		display: -webkit-flex;
 		display: flex;
+		-webkit-align-items: center;
 		align-items: center;
 
 		p {
@@ -14,6 +16,7 @@
 
 		/*Matches with the 'View More' item */
 		&:last-child {
+			-webkit-justify-content: center;
 			justify-content: center;
 		}
 	}
