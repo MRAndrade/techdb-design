@@ -1,5 +1,5 @@
 <!-- Just creating the template that shows the dashboardStats (it's linked to the left sided navbar)-->
-<template name="page-dashboardStat">
+<template name="dashboardStatPage">
 	{{>dashboardStat icon='fa fa-apple' entity='Technologies' records='300'}}
 	{{>dashboardStat icon='fa fa-columns' entity='Projects' records='140'}}
 	{{>dashboardStat icon='fa fa-building' entity='Organizations' records='212'}}
@@ -8,19 +8,19 @@
 
 <!-- Creating the dashboardStat itself -->
 <template name="dashboardStat">
-<div class="col-lg-3 col-md-6">
-	<div class="ibox float-e-margins">
-	    <div class="ibox-title">   	
-	        <h2>
-	        	<i class="{{icon}}"></i>{{entity}}
-	        </h2>
-	    </div>
-	    <div class="ibox-content">
-	        <h2 class="no-margins">{{records}}</h2>
-	        <h4>total records</h4>
-	    </div>
+	<div class="dashboardStat">
+		<div class="ibox float-e-margins">
+		    <div class="ibox-title">   	
+		        <h2>
+		        	<i class="{{icon}}"></i>{{entity}}
+		        </h2>
+		    </div>
+		    <div class="ibox-content">
+		        <h2 class="no-margins">{{records}}</h2>
+		        <h4>total records</h4>
+		    </div>
+		</div>
 	</div>
-</div>
 </template>
 
 

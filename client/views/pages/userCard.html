@@ -1,0 +1,93 @@
+<template name="userCardPage">
+	{{>userCard
+		name='Max Reis Andrade'
+		role='Admin'
+		affiliation='Front End Developer'
+		country='Brazil'
+		gender='Male'
+		birthday='1994-12-16'
+		twitter='mrandrade'
+		facebook='http://facebook.com/mrandrade'
+		hashtag='mrandrade'
+		phone='+55 11 2532-1243'
+		cellphone='+55 11 84923810'
+	}}
+</template>
+
+<template name="userCard">
+<div class="col-lg-3">
+	<div class="userCard">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title prof-name">
+        <h5>
+        	<i class="fa fa-user"></i>{{name}}
+        </h5>
+        <div class="ibox-tools">
+            <a href="#">
+                <i class="fa fa-pencil"></i>
+            </a>
+        </div>	
+      </div>
+      <div class="ibox-content">
+      	<!-- criei a classe profile-photo DENTRO do ibox-content só pra conseguir posicionar o icone com posição absoluta em cima da foto-->
+      	<div class="profile-photo">
+	      	<img alt="image" src="http://coletiva.net/wp-content/uploads/legacy/perfil/perfil480.jpg" class="img-responsive">
+	      	<a href="#">
+	      		<i class="fa fa-camera"></i>
+	      	</a>
+      	</div>
+			</div>
+			<div class="ibox-title">
+				<h5>
+        	<i class="fa fa-info-circle"></i>Information
+        </h5>
+			</div>
+			<div class="ibox-content prof-info">
+				<ul class="unstyled">
+					<li>
+						<b>Role:</b>{{role}}
+					</li>
+					<li>
+						<b>Affiliation:</b>{{affiliation}}
+					</li>
+					<li>
+						<b>Country:</b>{{country}}
+					</li>
+					<li>
+						<b>Gender:</b> <i class="fa fa-mars"></i>{{gender}}
+					</li>
+					<li>
+						<b>Birthday:</b>{{birthday}}
+					</li>
+				</ul>
+			</div>
+			<div class="ibox-title profile-contact">
+				<h5>
+        	<i class="fa fa-globe"></i>Contact
+        </h5>
+			</div>
+			<div class="ibox-content">
+				<ul class="unstyled">
+					<li>
+						<i class="fa fa-twitter"></i>{{twitter}}
+					</li>
+					<li>
+						<i class="fa fa-facebook"></i>{{facebook}}
+					</li>
+					<li>
+						<i class="fa fa-hashtag"></i>{{hashtag}}
+					</li>
+					<li>
+						<i class="fa fa-phone"></i>{{phone}}
+					</li>
+					<li>
+						<i class="fa fa-mobile"></i>{{cellphone}}
+					</li>
+				</ul>			
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+<!-- pendências: definir classe profile-info (já existe)
+criar parametragem -->

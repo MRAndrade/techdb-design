@@ -23,7 +23,9 @@
                         IN+
                     </div>
                 </li>
-                {{> menuItem regex='dashboard-stat' route='dashboard-stat' name='Dashboard Stat' icon='fa fa-home'}}
+                {{> menuItem regex='dashboard-stat' route='dashboard-stat' name='Dashboard Stat'}}
+                {{> menuItem regex='user-card' route='user-card' name='User Card'}}
+                {{> menuItem regex='recent-updates' route='recent-updates' name='Recent Updates'}}
             </ul>
         </div>
     </nav>
@@ -32,7 +34,6 @@
 <template name="menuItem">
     <li class="{{isActiveRoute regex=regex}}">
         <a href="{{pathFor route=route}}">
-            <i class="{{icon}}"></i>
             <span class="nav-label">{{name}}</span>
         </a>
     </li>

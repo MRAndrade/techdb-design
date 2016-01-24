@@ -9,7 +9,19 @@ Router.configure({
 //
 
 Router.route('/dashboard-stat', function () {
-    this.render('page-dashboardStat');
+    this.render('dashboardStatPage');
 },{
 	name: 'dashboard-stat'
+});
+
+Router.route('/user-card', function () {
+    this.render('userCardPage');
+},{
+	name: 'user-card'
+});
+
+Router.route('/recent-updates', function () {
+    this.render('recentUpdatesPage');
+},{
+	name: 'recent-updates'
 });
