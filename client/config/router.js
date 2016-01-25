@@ -43,3 +43,9 @@ Router.route('/user-dashboard', function () {
 },{
     name: 'user-dashboard'
 });
+
+Router.route('/panel', function () {
+    this.render('panelPage');
+}, {
+    name: 'panel'
+})
