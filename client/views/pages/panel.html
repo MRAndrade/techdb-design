@@ -1,0 +1,21 @@
+<template name="panelPage">
+  {{#panel title='exemplo painel'}}
+    Conteudo do painel
+    {{> foo}}
+  {{/panel}}
+</template>
+
+<template name="foo">
+  Foo
+</template>
+
+<template name="panel">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5>{{title}}</h5> 
+      </div>
+      <div class="ibox-content no-padding">
+        {{> UI.contentBlock}}
+      </div>
+  </div>
+</template>
