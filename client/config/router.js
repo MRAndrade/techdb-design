@@ -37,3 +37,9 @@ Router.route('/user-card', function () {
 },{
     name: 'user-card'
 });
+
+Router.route('/user-dashboard', function () {
+    this.render('userDashboardPage');
+},{
+    name: 'user-dashboard'
+});
