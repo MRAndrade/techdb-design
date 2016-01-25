@@ -1,36 +1,25 @@
 <template name="panelPage">
-  {{#panel title='exemplo painel'}}
-  {{>simpleListItem 
-      img='https://upload.wikimedia.org/wikipedia/commons/7/72/Message-icon-grey.png'
-      title='Título 1'
-      subtitle='Subtítulo 1'
-  }}
-
-  {{>simpleListItem 
-      img='https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png'
-      title='Título 2'
-      subtitle='Subtítulo 2'
-  }}
-
-  {{>simpleListItem 
-      img='https://cdn0.iconfinder.com/data/icons/Pinterest/512/Pinterest_Favicon.png'
-      title='Título 3'
-      subtitle='Subtítulo 3'
-  }}
-  {{/panel}}
+  {{#panelContainer}}
+    {{#panelTitle}} Exemplo de título{{/panelTitle}}
+    {{#panelContent panelClass='no-padding'}}Exemplo de content (no-padding){{/panelContent}}
+  {{/panelContainer}}
 </template>
 
-<template name="foo">
-  Foo
-</template>
-
-<template name="panel">
-    <div class="ibox float-e-margins">
-      <div class="ibox-title">
-        <h5>{{title}}</h5> 
-      </div>
-      <div class="ibox-content no-padding">
-        {{> UI.contentBlock}}
-      </div>
+<template name="panelContainer">
+  <div class="ibox float-e-margins">
+    {{ > UI.contentBlock}}
   </div>
 </template>
+
+<template name="panelTitle">
+  <div class="ibox-title">
+    {{> UI.contentBlock}}
+  </div>
+</template>
+
+<template name="panelContent">
+   <div class="ibox-content {{panelClass}}">
+     {{> UI.contentBlock}}
+   </div>
+</template>
+

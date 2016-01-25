@@ -5,29 +5,24 @@
 
 <!-- Creating the recentUpdates itself -->
 <template name="recentUpdates">
-   <div class="recentUpdates">
-   	<div class="ibox float-e-margins">
-   		<div class="ibox-title">
-   			<h5>Recent Updates</h5>	
-   		</div>
-   		<div class="ibox-content no-padding">
-   			<ul class="list-group">
-					<!-- What must to be done is to create a template for a single list item and inside this we set the parameters -->
-					{{>recentUpdatesItemTechnology user='mrandrade' icon='fa fa-apple' action='created a new description for' technology='drones' date='13/01/2016'}}
-					{{>recentUpdatesItemOrganization user='mrandrade' icon='fa fa-building' action='edited an organization' organization='microsoft' date='13/01/2016'}}
-					{{>recentUpdatesItemTechnology user='mrandrade' icon='fa fa-apple' action='created a new description for' technology='drones' date='13/01/2016'}}
-					{{>recentUpdatesItemOrganization user='mrandrade' icon='fa fa-building' action='edited an organization' organization='microsoft' date='13/01/2016'}}
+   <div class="recent-updates">
+   	<div class="ibox-content">
+			<ul class="list-group">
+				<!-- What must to be done is to create a template for a single list item and inside this we set the parameters -->
+				{{>recentUpdatesItemTechnology user='mrandrade' icon='fa fa-apple' action='created a new description for' technology='drones' date='13/01/2016'}}
+				{{>recentUpdatesItemOrganization user='mrandrade' icon='fa fa-building' action='edited an organization' organization='microsoft' date='13/01/2016'}}
+				{{>recentUpdatesItemTechnology user='mrandrade' icon='fa fa-apple' action='created a new description for' technology='drones' date='13/01/2016'}}
+				{{>recentUpdatesItemOrganization user='mrandrade' icon='fa fa-building' action='edited an organization' organization='microsoft' date='13/01/2016'}}
 
-					<!-- This must be the last element inside this ul, so it fits with &:last-child selector in the css file-->
-					<!-- Furthermore, it would be wrong to exist another element after this one, since 'View more' should stay at the very end of recent updates -->
-					<li class="list-group-item">
-						<a class="text-info" href="#">
-							<p>View more..</p>
-						</a>
-					</li>
-         	</ul>
-   		</div>
-   	</div> 
+				<!-- This must be the last element inside this ul, so it fits with &:last-child selector in the css file-->
+				<!-- Furthermore, it would be wrong to exist another element after this one, since 'View more' should stay at the very end of recent updates -->
+				<li class="list-group-item">
+					<a class="text-info" href="#">
+						<p>View more..</p>
+					</a>
+				</li>
+      	</ul>
+   	</div>
    </div>
 </template>
 
@@ -46,3 +41,6 @@
 		<p><a class="text-info" href="#">@{{user}}</a> {{action}} <a class="text-info" href="#">@{{organization}}</a> at {{date}}</p>
 	</li>
 </template>
+
+<!-- Pendências:
+refazer o recentUpdatesItem -->

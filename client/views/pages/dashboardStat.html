@@ -8,19 +8,22 @@
 
 <!-- Creating the dashboardStat itself -->
 <template name="dashboardStat">
-	<div class="dashboardStat">
-		<div class="ibox float-e-margins">
-		    <div class="ibox-title">   	
-		        <h2>
-		        	<i class="{{icon}}"></i>{{entity}}
-		        </h2>
-		    </div>
-		    <div class="ibox-content">
-		        <h2 class="no-margins">{{records}}</h2>
-		        <h4>total records</h4>
-		    </div>
-		</div>
+	<div class="dashboard-stat">
+		{{#panelContainer}}
+			{{#panelTitle}} 	
+				<h2>
+					<i class="{{icon}}"></i>{{entity}}
+			   </h2>
+			{{/panelTitle}}
+			{{#panelContent}}
+				<h2 class="no-margins">{{records}}</h2>
+				<h4>total records</h4>
+			{{/panelContent}}
+		{{/panelContainer}}
 	</div>
 </template>
 
+
+<!--Pendências:
+Transformar em template panel /ver como parametrizar icon dentro de outro parametro -->
 
