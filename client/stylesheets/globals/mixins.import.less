@@ -14,10 +14,52 @@
   opacity: @opacity;
 }
 
-/*Flex class (marvelous creation of humanity)*/
+/*Set display to flex*/
 .flex {
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center;
-	align-items: center;
 }
+
+/*Flex property to center align horizontaly*/
+.x-center-flex {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/*Flex property to align horizontaly to the right*/
+.x-right-flex {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+/*Flex items are displayed with equal spacing between them, first and last flex items are aligned to the edges of the flex container*/
+.x-between-flex {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/*Flex property to set equal spacing around every flex item within*/
+.x-around-flex {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/*Flex items are put to the very top*/
+.y-top-flex {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+/*Flex items are centered verticaly*/
+.y-center-flex {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/*Flex items are put to the very bottom*/
+.y-bottom-flex {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+

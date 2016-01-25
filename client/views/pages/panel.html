@@ -1,7 +1,10 @@
 <template name="panelPage">
   {{#panelContainer}}
     {{#panelTitle}} Exemplo de título{{/panelTitle}}
-    {{#panelContent panelClass='no-padding'}}Exemplo de content (no-padding){{/panelContent}}
+    {{#panelContent panelClass='no-padding'}}
+    <div style="display:flex;justify-content:flex-start;align-items:center;width:100%;height:80px;background-color:blue;">
+  <div style="width:87px;height:18px;background-color:green;"></div>
+</div>{{/panelContent}}
   {{/panelContainer}}
 </template>
 
