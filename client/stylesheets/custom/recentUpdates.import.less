@@ -2,23 +2,47 @@
 	.list-group-item {
 		.flex;
 		.y-center-flex;
+		.x-between-flex;
 
 		p {
 			display: inline-block; /*To fit at the same line with icon*/
-			margin: 10px 0;
-		}
-		i {
-			margin-right: 5px;
-			font-size: 3em; /*Declaring this, instead of placing fa-3x in every icon of recentUpdates*/
+			margin: 10px 0px 10px 10px;
+      	width: 100%;
+
+			.date {
+				float: right;
+				font-style: italic;
+				font-size: 0.9em;
+			}
 		}
 
-		/*Matches with the 'View More' item */
+		button { margin: 0;}
+
+		.icon-holder {
+      	width: @recent-updates-icon-size;
+      	height: @recent-updates-icon-size;
+      	i{ color:white; }     
+   	}
+
+		/*Matches with the 'View More' and 'View Less' item */
 		&:last-child {
 			.x-center-flex;
+			.flex-direction-column;
+
+			a {
+				p {
+					margin: 0;
+				}
+				/*Matches with 'View Less'*/
+				&:last-child {
+					font-size: 11px;
+				}
+
+			}
+
 		}
 	}
 }
 
 // pendências:
 // definir um tamanho padrão para os ícones, para alinhar com o parágrafo
- 
