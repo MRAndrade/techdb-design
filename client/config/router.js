@@ -44,6 +44,18 @@ Router.route('/user-dashboard', function () {
     name: 'user-dashboard'
 });
 
+Router.route('/user-entry', function () {
+    this.render('userEntry');
+},{
+    name: 'user-entry'
+});
+
+Router.route('/projects-working', function () {
+    this.render('projectsWorkingPage');
+}, {
+    name: 'projects-working'
+})
+
 Router.route('/panel', function () {
     this.render('panelPage');
 }, {

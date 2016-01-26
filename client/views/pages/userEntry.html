@@ -1,0 +1,28 @@
+<template name="userEntry">
+	<div class="row">
+		{{!-- Not sure about small, sm-offset is bugged somehow --}}
+		<div class="col-md-4">
+			{{>userCard 
+			name='Max Reis Andrade'
+			role='Admin'
+			affiliation='Front End'
+			country='Brazil'
+			genderIcon='fa fa-mars'
+			gender='Male'
+			birthday='1994-12-16'
+			twitter='mrandrade'
+			facebook='max.andrade.395'
+			hashtag='mrandrade'
+			phone='+55 11 5678-9090'
+			mobile='+55 11 9876-2345'
+			bio='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dignissimos asperiores, repellat animi dolore commodi cupiditate distinctio pariatur, velit obcaecati sed. Tempore, architecto perspiciatis tenetur vero molestias ratione, aut delectus.'}}
+		</div>
+		<div class="col-xs-12 col-md-8">
+			<div class="row">
+				{{>recentUpdates}}
+
+				{{>projectsWorking}}
+			</div>
+		</div>
+	</div>
+</template>
