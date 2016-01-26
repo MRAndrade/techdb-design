@@ -1,99 +1,79 @@
 <template name="userCardPage">
-<div class="row">
-  <div class="col-md-4">
-	{{>userCard
-		name='Max Reis Andrade'
-		role='Admin'
-		affiliation='Front End Developer'
-		country='Brazil'
-		gender='Male'
-		birthday='1994-12-16'
-		twitter='mrandrade'
-		facebook='http://facebook.com/mrandrade'
-		hashtag='mrandrade'
-		phone='+55 11 2532-1243'
-		cellphone='+55 11 84923810'
-	}}
-  </div>
-</div>
+	<div class="row">
+		<div class="col-md-4">
+		{{>userCard name='Max Reis Andrade'}}
+		</div>
+	</div>
 </template>
 
 <template name="userCard">
 	<div class="user-card">
-		<div class="ibox float-e-margins">
-			<div class="ibox-title prof-name">
-        <h5>
-        	<i class="fa fa-user"></i>{{name}}
-        </h5>
-        <div class="ibox-tools">
-            <a href="#">
-                <i class="fa fa-pencil"></i>
-            </a>
-        </div>	
-      </div>
-      <div class="ibox-content">
-      	<!-- criei a classe profile-photo DENTRO do ibox-content só pra conseguir posicionar o icone com posição absoluta em cima da foto-->
-      	<div class="profile-photo">
-	      	<img alt="image" src="http://coletiva.net/wp-content/uploads/legacy/perfil/perfil480.jpg" class="img-responsive">
-	      	<a href="#">
-	      		<i class="fa fa-camera"></i>
-	      	</a>
-      	</div>
-			</div>
-			<div class="ibox-title">
-				<h5>
-        	<i class="fa fa-info-circle"></i>Information
-        </h5>
-			</div>
-			<div class="ibox-content prof-info">
-				<ul class="unstyled">
+		{{#panelContainer}}
+			{{#panelTitle}}
+				<h3>
+					<i class="fa fa-user"></i> 
+					{{name}}
+				</h3>
+				<div class="ibox-tools">
+					<a href="#">
+						<i class="fa fa-pencil"></i>
+					</a>
+				</div>
+			{{/panelTitle}}
+
+			{{#panelContent panelClass='no-padding'}}
+				<img src="http://zblogged.com/wp-content/uploads/2015/11/5.png" class="img-responsive" alt="profile-img">
+			{{/panelContent}}
+
+			{{#panelTitle}}
+				<h3>
+					<i class="fa fa-info"></i> Information
+				</h3>
+			{{/panelTitle}}
+
+			{{#panelContent}}
+				{{!-- incompleto --}}
+				<ul class="unstyled pair-list">
 					<li>
-						<p><b>Role:</b>{{role}}</p>
+						<p>Role: </p> Max Andrade
 					</li>
 					<li>
-						<p><b>Affiliation:</b>{{affiliation}}</p>
+						<p>Affiliation: </p> Researcher
 					</li>
 					<li>
-						<b>Country:</b>{{country}}
+						<p>Country: </p> Brazil
 					</li>
 					<li>
-						<b>Gender:</b> <i class="fa fa-mars"></i>{{gender}}
+						<p>Gender: </p> Male
 					</li>
 					<li>
-						<b>Birthday:</b>{{birthday}}
+						<p>Birthday: </p> 1994-12-16
 					</li>
 				</ul>
-			</div>
-			<div class="ibox-title profile-contact">
-				<h5>
-        	<i class="fa fa-globe"></i>Contact
-        </h5>
-			</div>
-			<div class="ibox-content">
-				<ul class="unstyled">
-					<li>
-						<i class="fa fa-twitter"></i>{{twitter}}
-					</li>
-					<li>
-						<i class="fa fa-facebook"></i>{{facebook}}
-					</li>
-					<li>
-						<i class="fa fa-hashtag"></i>{{hashtag}}
-					</li>
-					<li>
-						<i class="fa fa-phone"></i>{{phone}}
-					</li>
-					<li>
-						<i class="fa fa-mobile"></i>{{cellphone}}
-					</li>
-				</ul>			
-			</div>
-		</div>
+
+			{{/panelContent}}
+			
+			{{#panelTitle}}
+				<h3>
+					<i class="fa fa-globe"></i> Contact
+				</h3>
+			{{/panelTitle}}
+
+			{{#panelContent panelClass='no-padding'}}
+
+
+			{{/panelContent}}
+
+			{{#panelTitle}}
+				<h3>
+					<i class="fa fa-book"></i> Bio
+				</h3>
+			{{/panelTitle}}
+
+			{{#panelContent panelClass='no-padding'}}
+
+
+			{{/panelContent}}
+		{{/panelContainer}}
 	</div>
 </template>
-<!-- pendências: definir classe profile-info (já existe)
-criar parametragem de ícone {if: Male - fa fa-mars / If: Female - fa fa-venus}
-transformar textos dentro da li em parágrafos-->
-
-<!-- Pendências 2:
-ver como montar userCard dentro do template panel -->
