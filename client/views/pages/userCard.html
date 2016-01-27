@@ -20,106 +20,104 @@
 </template>
 
 <template name="userCard">
-	<div class="user-card">
-		{{#panelContainer}}
-			{{#panelTitle}}
-				<h3>
-					<i class="fa fa-user"></i> 
-					{{name}}
-				</h3>
-				<div class="ibox-tools">
-					<a href="#">
-						<i class="fa fa-pencil"></i>
-					</a>
-				</div>
-			{{/panelTitle}}
+	{{#panelContainer class='float-e-margins user-card'}}
+		{{#panelTitle}}
+			<h3>
+				<i class="fa fa-user"></i> 
+				{{name}}
+			</h3>
+			<div class="ibox-tools">
+				<a href="#">
+					<i class="fa fa-pencil"></i>
+				</a>
+			</div>
+		{{/panelTitle}}
 
-			{{#panelContent panelClass='no-padding'}}
-				<div class="profile-photo">
-					<img src="http://zblogged.com/wp-content/uploads/2015/11/5.png" class="img-responsive" alt="profile-img">
-					<a href="#">
-						<i class="fa fa-camera fa-2x"></i>
-						<p>Update Profile Picture</p>
-					</a>
-				</div>
-			{{/panelContent}}
+		{{#panelContent class='no-padding'}}
+			<div class="profile-photo">
+				<img src="http://zblogged.com/wp-content/uploads/2015/11/5.png" class="img-responsive" alt="profile-img">
+				<a href="#">
+					<i class="fa fa-camera fa-2x"></i>
+					<p>Update Profile Picture</p>
+				</a>
+			</div>
+		{{/panelContent}}
 
-			{{#panelTitle}}
-				<h3>
-					<i class="fa fa-info"></i> Information
-				</h3>
-			{{/panelTitle}}
+		{{#panelTitle}}
+			<h3>
+				<i class="fa fa-info"></i> Information
+			</h3>
+		{{/panelTitle}}
 
-			{{#panelContent}}
-				<ul class="unstyled pair-list">
-					<li>
-						<p>Role:</p>
-						<p><a href="#" class="text-info"><i class="fa fa-gear"></i> {{role}}</a></p>
-					</li>
-					<li>
-						<p>Affiliation:</p>
-						<p>{{affiliation}}</p>
-					</li>
-					<li>
-						<p>Country:</p>
-						<p>{{country}}</p>
-					</li>
-					<li>
-						<p>Gender:</p>
-						<p><i class="{{genderIcon}}"></i> {{gender}}</p>
-					</li>
-					<li>
-						<p>Birthday:</p>
-						<p>{{birthday}}</p>
-					</li>
-				</ul>
+		{{#panelContent}}
+			<ul class="unstyled pair-list">
+				<li>
+					<p>Role:</p>
+					<p><a href="#" class="text-info"><i class="fa fa-gear"></i> {{role}}</a></p>
+				</li>
+				<li>
+					<p>Affiliation:</p>
+					<p>{{affiliation}}</p>
+				</li>
+				<li>
+					<p>Country:</p>
+					<p>{{country}}</p>
+				</li>
+				<li>
+					<p>Gender:</p>
+					<p><i class="{{genderIcon}}"></i> {{gender}}</p>
+				</li>
+				<li>
+					<p>Birthday:</p>
+					<p>{{birthday}}</p>
+				</li>
+			</ul>
 
-			{{/panelContent}}
-			
-			{{#panelTitle}}
-				<h3>
-					<i class="fa fa-globe"></i> Contact
-				</h3>
-			{{/panelTitle}}
+		{{/panelContent}}
+		
+		{{#panelTitle}}
+			<h3>
+				<i class="fa fa-globe"></i> Contact
+			</h3>
+		{{/panelTitle}}
 
-			{{#panelContent}}
+		{{#panelContent}}
 
-				<ul class="unstyled pair-list">
-					<li>
-						<i class="fa fa-twitter"></i>
-						<p>@{{twitter}}</p>
-					</li>
-					<li>
-						<i class="fa fa-facebook"></i>
-						<p>{{facebook}}</p>
-					</li>
-					<li>
-						<i class="fa fa-hashtag"></i>
-						<p>{{hashtag}}</p>
-					</li>
-					<li>
-						<i class="fa fa-phone"></i>
-						<p>{{phone}}</p>
-					</li>
-					<li>
-						<i class="fa fa-mobile"></i>
-						<p>{{mobile}}</p>
-					</li>
-				</ul>
+			<ul class="unstyled pair-list">
+				<li>
+					<i class="fa fa-twitter"></i>
+					<p>@{{twitter}}</p>
+				</li>
+				<li>
+					<i class="fa fa-facebook"></i>
+					<p>{{facebook}}</p>
+				</li>
+				<li>
+					<i class="fa fa-hashtag"></i>
+					<p>{{hashtag}}</p>
+				</li>
+				<li>
+					<i class="fa fa-phone"></i>
+					<p>{{phone}}</p>
+				</li>
+				<li>
+					<i class="fa fa-mobile"></i>
+					<p>{{mobile}}</p>
+				</li>
+			</ul>
 
-			{{/panelContent}}
+		{{/panelContent}}
 
-			{{#panelTitle}}
-				<h3>
-					<i class="fa fa-book"></i> Bio
-				</h3>
-			{{/panelTitle}}
+		{{#panelTitle}}
+			<h3>
+				<i class="fa fa-book"></i> Bio
+			</h3>
+		{{/panelTitle}}
 
-			{{#panelContent}}
+		{{#panelContent}}
 
-				<p>{{bio}}</p>	
+			<p>{{bio}}</p>	
 
-			{{/panelContent}}
-		{{/panelContainer}}
-	</div>
+		{{/panelContent}}
+	{{/panelContainer}}
 </template>

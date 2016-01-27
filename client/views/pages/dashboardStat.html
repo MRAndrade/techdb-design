@@ -8,19 +8,17 @@
 
 <!-- Creating the dashboardStat itself -->
 <template name="dashboardStat">
-	<div class="dashboard-stat">
-		{{#panelContainer}}
-			{{#panelTitle}} 	
-				<h1>
-					<i class="{{icon}}"></i>{{entity}}
-			   </h1>
-			{{/panelTitle}}
-			{{#panelContent}}
-				<h2 class="no-margins">{{records}}</h2>
-				<small>total records</small><!-- transformar em small -->
-			{{/panelContent}}
-		{{/panelContainer}}
-	</div>
+	{{#panelContainer class='float-e-margins dashboard-stat'}}
+		{{#panelTitle}} 	
+			<h1>
+				<i class="{{icon}}"></i>{{entity}}
+		   </h1>
+		{{/panelTitle}}
+		{{#panelContent}}
+			<h2 class="no-margins">{{records}}</h2>
+			<small>total records</small><!-- transformar em small -->
+		{{/panelContent}}
+	{{/panelContainer}}
 </template>
 
 

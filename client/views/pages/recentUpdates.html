@@ -3,29 +3,27 @@
 </template>
 
 <template name="recentUpdates">
-   <div class="recent-updates">
-   	{{#panelContainer}}
-   		{{#panelTitle}}
-				<h1>Recent Updates</h1>
-   		{{/panelTitle}}
-	   	{{#panelContent panelClass='no-padding'}}
-				<ul class="list-group">
-					{{>recentUpdatesItem color='info' icon='fa fa-empire' username='mrandrade' description='created a new description for' docName='drones' createdAt='13/05/2016'}}
-					{{>recentUpdatesItem color='success' icon='fa fa-send' username='mrandrade' description='edited an organization' docName='airlines' createdAt='13/05/2016'}}
-					{{>recentUpdatesItem color='info' icon='fa fa-empire' username='mrandrade' description='created a new description for' docName='drones' createdAt='13/05/2016'}}
-					{{>recentUpdatesItem color='success' icon='fa fa-send' username='mrandrade' description='edited an organization' docName='airlines' createdAt='13/05/2016'}}
-					<li class="list-group-item">
-						<a class="text-info" href="#">
-							<p>View more..</p>
-						</a>
-						<a class="text-info" href="#">
-							<p>View less</p>
-						</a>
-					</li>
-	      	</ul>
-	   	{{/panelContent}}
-   	{{/panelContainer}}
-   </div>
+	{{#panelContainer class='float-e-margins recent-updates'}}
+		{{#panelTitle}}
+			<h1>Recent Updates</h1>
+		{{/panelTitle}}
+   	{{#panelContent class='no-padding'}}
+			<ul class="list-group">
+				{{>recentUpdatesItem color='info' icon='fa fa-empire' username='mrandrade' description='created a new description for' docName='drones' createdAt='13/05/2016'}}
+				{{>recentUpdatesItem color='success' icon='fa fa-send' username='mrandrade' description='edited an organization' docName='airlines' createdAt='13/05/2016'}}
+				{{>recentUpdatesItem color='info' icon='fa fa-empire' username='mrandrade' description='created a new description for' docName='drones' createdAt='13/05/2016'}}
+				{{>recentUpdatesItem color='success' icon='fa fa-send' username='mrandrade' description='edited an organization' docName='airlines' createdAt='13/05/2016'}}
+				<li class="list-group-item">
+					<a class="text-info" href="#">
+						<p>View more..</p>
+					</a>
+					<a class="text-info" href="#">
+						<p>View less</p>
+					</a>
+				</li>
+      	</ul>
+   	{{/panelContent}}
+	{{/panelContainer}}
 </template>
 
 <template name="recentUpdatesItem">

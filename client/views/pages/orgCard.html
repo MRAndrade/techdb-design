@@ -14,64 +14,62 @@
 </template>
 
 <template name="orgCard">
-	<div class="org-card">
-		{{#panelContainer}}
-			{{#panelTitle}}
-				<h3>
-					<i class="fa fa-building"></i> 
-					{{organization}}
-				</h3>
-				<div class="ibox-tools">
-					<a href="#">
-						<i class="fa fa-pencil"></i>
-					</a>
-				</div>
-			{{/panelTitle}}
-			{{#panelContent panelClass='no-padding'}}
-				<img src="http://www.tvredepetropolis.com.br/portal/wp-content/uploads/Microsoft-Logo-20121.jpg" class="img-responsive" alt="organization image">
-			{{/panelContent}}
-			{{#panelContent}}
-				<table class="table">
-					<tr>
-						<td>Founding Year</td>
-						<td>{{year}}</td>
-					</tr>
-					<tr>
-						<td>Country</td>
-						<td>{{country}}</td>
-					</tr>
-					<tr>
-						<td>Type</td>
-						<td>{{type}}</td>
-					</tr>
-					<tr>
-						<td>Twitter</td>
-						<td>{{twitter}}</td>
-					</tr>
-					<tr>
-						<td>Facebook</td>
-						<td>{{facebook}}</td>
-					</tr>
-					<tr>
-						<td>Website</td>
-						<td>{{website}}</td>
-					</tr>
-					<tr>
-						<td>People</td>
-						<td>
-							<a href="#">
-								<img src="http://www.bbstool.co.za/assets/img/avatar/2.jpg" class="img-circle" alt="bill-gates">
-							</a>
-							<a href="#">
-								<img src="http://assets.bizjournals.com/seattle/blog/Allen,Paul_SQUARE*750.jpg?v=1" class="img-circle" alt="paul-allen">
-							</a>
-							<a href="#" class="btn add-people">
-								<i class="fa fa-plus"></i>
-							</a>
-						</td>
-					</tr>
-				</table>
-			{{/panelContent}}
-		{{/panelContainer}}
-	</div>
+	{{#panelContainer class='float-e-margins org-card'}}
+		{{#panelTitle}}
+			<h3>
+				<i class="fa fa-building"></i> 
+				{{organization}}
+			</h3>
+			<div class="ibox-tools">
+				<a href="#">
+					<i class="fa fa-pencil"></i>
+				</a>
+			</div>
+		{{/panelTitle}}
+		{{#panelContent class='no-padding'}}
+			<img src="http://www.tvredepetropolis.com.br/portal/wp-content/uploads/Microsoft-Logo-20121.jpg" class="img-responsive" alt="organization image">
+		{{/panelContent}}
+		{{#panelContent}}
+			<table class="table">
+				<tr>
+					<td>Founding Year</td>
+					<td>{{year}}</td>
+				</tr>
+				<tr>
+					<td>Country</td>
+					<td>{{country}}</td>
+				</tr>
+				<tr>
+					<td>Type</td>
+					<td>{{type}}</td>
+				</tr>
+				<tr>
+					<td>Twitter</td>
+					<td>{{twitter}}</td>
+				</tr>
+				<tr>
+					<td>Facebook</td>
+					<td>{{facebook}}</td>
+				</tr>
+				<tr>
+					<td>Website</td>
+					<td>{{website}}</td>
+				</tr>
+				<tr>
+					<td>People</td>
+					<td>
+						<a href="#">
+							<img src="http://www.bbstool.co.za/assets/img/avatar/2.jpg" class="img-circle" alt="bill-gates">
+						</a>
+						<a href="#">
+							<img src="http://assets.bizjournals.com/seattle/blog/Allen,Paul_SQUARE*750.jpg?v=1" class="img-circle" alt="paul-allen">
+						</a>
+						<a href="#" class="btn add-people">
+							<i class="fa fa-plus"></i>
+						</a>
+					</td>
+				</tr>
+			</table>
+		{{/panelContent}}
+	{{/panelContainer}}
 </template>

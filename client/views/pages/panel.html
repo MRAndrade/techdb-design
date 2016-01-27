@@ -8,7 +8,7 @@
 </template>
 
 <template name="panelContainer">
-  <div class="ibox float-e-margins">
+  <div class="ibox {{class}}">
     {{ > UI.contentBlock}}
   </div>
 </template>
@@ -20,7 +20,7 @@
 </template>
 
 <template name="panelContent">
-   <div class="ibox-content {{panelClass}}">
+   <div class="ibox-content {{class}}">
      {{> UI.contentBlock}}
    </div>
 </template>

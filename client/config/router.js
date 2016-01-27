@@ -8,10 +8,18 @@ Router.configure({
 // Example pages routes
 //
 
+
+
 Router.route('/attachment-card', function () {
     this.render('attachmentCardPage');
 },{
     name: 'attachment-card'
+});
+
+Router.route('/brief-card', function () {
+    this.render('briefCardPage');
+},{
+    name: 'brief-card'
 });
 
 Router.route('/dashboard-stat', function () {
