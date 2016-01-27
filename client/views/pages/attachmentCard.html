@@ -1,7 +1,14 @@
 <template name="attachmentCardPage">
 	<div class="row">
 		<div class="col-lg-4">
-			{{>attachmentCard}}
+			{{>attachmentCard
+				icon='fa fa-file'
+				attachmentName='Attachment File.png'
+				img='http://mdemaria.biz/img/fotos/imagens%20paisagem%201.jpg'
+				description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt, quis ipsam dolores dignissimos incidunt hic molestias nulla. Laborum ipsa ipsum, delectus recusandae reprehenderit nesciunt? Assumenda, explicabo, voluptatibus. Asperiores, corporis?'
+				uploadDate='13/02/2016'
+				createdBy='Max Andrade'
+				}}
 		</div>
 	</div>
 </template>
@@ -12,8 +19,8 @@
 				{{#panelTitle}}
 					<a href="#">
 						<h3>
-							<i class="fa fa-file"></i> {{!-- {{icon}} --}}
-							Attachment Title.png{{!-- {{attachmentName}} --}}
+							<i class="{{icon}}"></i>
+							{{attachmentName}}
 						</h3>
 					</a>
 					<div class="ibox-tools">
@@ -25,18 +32,13 @@
 
 				{{#panelContent panelClass='no-padding'}}
 					<a href="#">
-						<img src="http://mdemaria.biz/img/fotos/imagens%20paisagem%201.jpg" class="img-responsive" alt="attachment image">
+						<img src="{{img}}" class="img-responsive" alt="attachment image">
 					</a>
 				{{/panelContent}}
 
 				{{#panelContent}}
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>{{description}}</p>
 
 				{{/panelContent}}			
 
@@ -44,13 +46,13 @@
 					<ul>
 						<li>
 							<p>Upload Date: </p>
-							<p>13/02/2016</p>
+							<p>{{uploadDate}}</p>
 						</li>
 						<li>
 							<p>Created by:</p>
 							<p>
 								<i class="fa fa-user"></i>
-								Max Andrade
+								{{createdBy}}
 							</p>
 						</li>
 					</ul>
