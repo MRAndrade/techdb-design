@@ -1,0 +1,90 @@
+<template name="attachmentCardPage">
+	<div class="row">
+		<div class="col-lg-4">
+			{{>attachmentCard}}
+		</div>
+	</div>
+</template>
+
+<template name="attachmentCard">
+	<div class="attachment-card">
+		{{#panelContainer}}
+				{{#panelTitle}}
+					<a href="#">
+						<h3>
+							<i class="fa fa-file"></i> {{!-- {{icon}} --}}
+							Attachment Title.png{{!-- {{attachmentName}} --}}
+						</h3>
+					</a>
+					<div class="ibox-tools">
+						<a href="#">
+							<i class="fa fa-pencil"></i>
+						</a>
+					</div>
+				{{/panelTitle}}
+
+				{{#panelContent panelClass='no-padding'}}
+					<a href="#">
+						<img src="http://mdemaria.biz/img/fotos/imagens%20paisagem%201.jpg" class="img-responsive" alt="attachment image">
+					</a>
+				{{/panelContent}}
+
+				{{#panelContent}}
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				{{/panelContent}}			
+
+				{{#panelContent}}
+					<ul>
+						<li>
+							<p>Upload Date: </p>
+							<p>13/02/2016</p>
+						</li>
+						<li>
+							<p>Created by:</p>
+							<p>
+								<i class="fa fa-user"></i>
+								Max Andrade
+							</p>
+						</li>
+					</ul>
+				{{/panelContent}}
+
+				{{#panelContent}}
+					<h5>
+						<i class="fa fa-columns"></i> Related Projects
+					</h5>
+					<a href="#">@drone</a>
+					<a href="#">@wifi</a>
+					<a href="#">@bioniceyes</a>
+					<a href="#">@smartwatch</a>
+					<a href="#">@xtpo</a>
+					<a href="#">@smartbook</a>
+				{{/panelContent}}
+				
+				{{#panelContent}}
+					<h5>
+						<i class="fa fa-code-fork"></i> Related Technologies
+					</h5>
+					<a href="#">@drone</a>
+					<a href="#">@wifi</a>
+					<a href="#">@bioniceyes</a>
+					<a href="#">@smartwatch</a>
+				{{/panelContent}}
+
+				{{#panelContent}}
+					<h5>
+						<i class="fa fa-columns"></i> Related Organizations
+					</h5>
+					<a href="#">@microsoft</a>
+					<a href="#">@apple</a>
+				{{/panelContent}}
+			{{/panelContainer}}
+	</div>
+</template>

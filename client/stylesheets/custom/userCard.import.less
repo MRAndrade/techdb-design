@@ -31,26 +31,5 @@
 	}
 
 	/*Settings for the data list*/
-	ul {
-		padding: 0;
-		margin: 0;
-
-		li {
-			.flex;
-			.x-between-flex;
-			.y-center-flex;
-
-			padding: 5px 0;
-		}
-
-		p {
-			display: inline-block;
-			margin: 0; /*Leaving the padding/margin stuff for the <li>, since it has flex */
-
-			/*It only matches IF the <li>'s firts-child is a <p>*/
-			&:first-child {
-				font-weight: 600;
-			}
-		}
-	}
+	.card;
 }

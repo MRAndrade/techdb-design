@@ -8,6 +8,12 @@ Router.configure({
 // Example pages routes
 //
 
+Router.route('/attachment-card', function () {
+    this.render('attachmentCardPage');
+},{
+    name: 'attachment-card'
+});
+
 Router.route('/dashboard-stat', function () {
     this.render('dashboardStatPage');
 },{
@@ -18,6 +24,12 @@ Router.route('/main-dashboard', function () {
     this.render('mainDashboard');
 },{
     name: 'main-dashboard'
+});
+
+Router.route('/org-card', function () {
+    this.render('orgCardPage');
+},{
+    name: 'org-card'
 });
 
 Router.route('/recent-updates', function () {
