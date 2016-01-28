@@ -87,3 +87,9 @@ Router.route('/panel', function () {
 }, {
     name: 'panel'
 })
+
+Router.route('/modals', function () {
+    this.render('modals');
+}, {
+    name: 'modals'
+})
