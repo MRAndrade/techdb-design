@@ -46,6 +46,12 @@ Router.route('/recent-updates', function () {
 	name: 'recent-updates'
 });
 
+Router.route('/search-container', function () {
+    this.render('searchContainerPage');
+},{
+    name: 'search-container'
+});
+
 Router.route('/simple-list-item', function () {
     this.render('simpleListItemPage');
 },{
