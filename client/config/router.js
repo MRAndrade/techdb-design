@@ -28,10 +28,22 @@ Router.route('/dashboard-stat', function () {
 	name: 'dashboard-stat'
 });
 
+Router.route('/default-minor-components', function () {
+    this.render('defaultMinorComponentsPage');
+},{
+    name: 'default-minor-components'
+});
+
 Router.route('/main-dashboard', function () {
     this.render('mainDashboard');
 },{
     name: 'main-dashboard'
+});
+
+Router.route('/modals', function () {
+    this.render('modals');
+}, {
+    name: 'modals'
 });
 
 Router.route('/org-card', function () {
@@ -80,16 +92,4 @@ Router.route('/projects-working', function () {
     this.render('projectsWorkingPage');
 }, {
     name: 'projects-working'
-})
-
-Router.route('/panel', function () {
-    this.render('panelPage');
-}, {
-    name: 'panel'
-})
-
-Router.route('/modals', function () {
-    this.render('modals');
-}, {
-    name: 'modals'
-})
+});

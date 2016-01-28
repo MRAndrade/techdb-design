@@ -1,0 +1,42 @@
+<!-- This page will contain all default minor contents that are inside other many components -->
+<!-- This way, all this default components can be easily changed in only one place-->
+
+<template name="defaultMinorComponentsPage">
+	<h1>Panel</h1>
+	{{#panelContainer}}
+   	{{#panelTitle}} <h5>Título</h5>{{/panelTitle}}
+   	{{#panelContent}}
+      	<p>Conteúdo</p>
+   	{{/panelContent}}
+	{{/panelContainer}}
+
+	<h1>Search Bar</h1>
+	{{>searchBar}}
+</template>
+
+
+
+<!-- SEARCH BAR-->
+	<template name="searchBar">
+		<input class="form-control search-bar" placeholder="Search" name="search" type="text">
+	</template>
+
+
+<!-- PANELS -- >
+	<template name="panelContainer">
+	  <div class="ibox {{class}}">
+	    {{ > UI.contentBlock}}
+	  </div>
+	</template>
+
+	<template name="panelTitle">
+	  <div class="ibox-title">
+	    {{> UI.contentBlock}}
+	  </div>
+	</template>
+
+	<template name="panelContent">
+	   <div class="ibox-content {{class}}">
+	     {{> UI.contentBlock}}
+	   </div>
+	</template>

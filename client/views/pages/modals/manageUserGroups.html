@@ -1,0 +1,40 @@
+<template name="manageUserGroups">
+	<div class="modal inmodal manage-user-groups">
+   	<div class="modal-dialog">
+   		<div class="modal-content animated fadeIn">
+      		<div class="modal-header">
+         		<button type="button" class="close" data-dismiss="modal">
+         			<span aria-hidden="true">&times;</span>
+         			<span class="sr-only">Close</span>
+         		</button>
+         		<h4 class="modal-title">Manage User Groups</h4>
+        		</div>
+        		<div class="modal-body">
+      			{{>searchBar}}
+      			{{>manageUserItem user='mrandrade'}}
+      			{{>manageUserItem user='rafaelcorreia'}}
+      			{{>manageUserItem user='mrandrade'}}
+      			{{>manageUserItem user='rafaelcorreia'}}
+      		</div>
+   		</div>
+   	</div>
+  </div>
+</template>
+
+<template name="manageUserItem">
+	<div class="manage-user-item">
+		<div class="row">
+			<div class="col-xs-2 img-column">
+				<img src="https://lh3.googleusercontent.com/-ZadaXoUTBfs/AAAAAAAAAAI/AAAAAAAAAAA/3rh5IMTHOzg/photo.jpg" class="img-circle" alt="user-img">
+			</div>
+			<div class="col-xs-4 user-column">
+				<a href="#" class="text-info">@{{user}}</a>
+			</div>
+			<div class="col-xs-6 buttons-column">
+				<button class="btn btn-primary" type="button">Admin</button>
+				<button class="btn btn-primary" type="button">Editor</button>
+				<button class="btn btn-primary" type="button">Viewer</button>
+			</div>
+		</div>
+	</div>
+</template>
