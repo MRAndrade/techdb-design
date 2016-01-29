@@ -1,10 +1,34 @@
 <template name="searchAttachmentsContainer">
 	<div class="row">
-		<div class="col-lg-8">
-			
+		<div class="col-xs-12 col-sm-7 col-md-8">
+			<div class="equal-margin">
+				{{>searchBarViewOptions}}
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-12 col-md-4">
+					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-4">
+					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-4">
+					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-4">
+					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-4">
+					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-4">
+					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
+				</div>
+			</div>			
 		</div>
-		<div class="col-lg-4">
-			{{>changeTab}}
+		<div class="col-xs-12 col-sm-5 col-md-4">
+			<div class="equal-margin">
+				{{>changeTab}}
+			</div>
 			{{>attachmentAboutBox
 				icon='fa fa-file'
 				attachmentName='Attachment File.png'
@@ -12,18 +36,23 @@
 				description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt, quis ipsam dolores dignissimos incidunt hic molestias nulla. Laborum ipsa ipsum, delectus recusandae reprehenderit nesciunt? Assumenda, explicabo, voluptatibus. Asperiores, corporis?'
 				uploadDate='13/02/2016'
 				}}
-			}
 		</div>
 	</div>
 </template>
 
 <template name="changeTab">
-<div class="ibox-content">
 	<div class="change-tab">
-		<div class="btn-group">
-			<button class="btn btn-default" type="button">Information</button>
-			<button class="btn btn-default" type="button">Recent Updates</button>
-		</div>
+		<button class="btn btn-default" type="button">Information</button>
+		<button class="btn btn-default" type="button">Recent Updates</button>
 	</div>
-</div>
 </template>
+
+<!-- Grid settings:
+	Large: searchBar 8 - attachmentThumbnail 4 - AboutBox 4 (i think that's ok)
+	Medium: searchBar 8 - attachmentThumbnail 4 - AboutBox 4 (i think that's ok)
+	Small (here comes the conflict):
+		Option 1: searchBar 7 - AboutBox 5 - attachmentThumbnail 6 (Current One, the more acceptable one i think)
+		Option 2: searchBar 6 - AboutBox 6 - attachmentThumbnail 6 (really dont like it)
+		Option 3: searchBar 6 - AboutBox 6 - attachmentThumbnail 12 (just ok)
+	X-Small: 
+-->

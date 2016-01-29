@@ -21,11 +21,9 @@
 
 	.view-options-column {
 		.inline-flex;
-		.x-around-flex;
 
-		/*Setting this so the column always keep the same size at every portview, as well as the buttons spacing*/
-		/*It also helps to flex-grow property on search-bar-column works properly*/
-		/*If by any reason the buttons size must be changed, this property must too*/
-		width: 90px;
+		button {
+			margin-left: 5px;
+		}
 	}
 }
