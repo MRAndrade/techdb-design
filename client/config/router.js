@@ -10,10 +10,10 @@ Router.configure({
 
 
 
-Router.route('/attachment-card', function () {
-    this.render('attachmentCardPage');
+Router.route('/attachment-about-box', function () {
+    this.render('attachmentAboutBoxPage');
 },{
-    name: 'attachment-card'
+    name: 'attachment-about-box'
 });
 
 Router.route('/brief-card', function () {
@@ -46,10 +46,10 @@ Router.route('/modals', function () {
     name: 'modals'
 });
 
-Router.route('/org-card', function () {
-    this.render('orgCardPage');
+Router.route('/org-about-box', function () {
+    this.render('orgAboutBoxPage');
 },{
-    name: 'org-card'
+    name: 'org-about-box'
 });
 
 Router.route('/recent-updates', function () {
@@ -70,10 +70,10 @@ Router.route('/simple-list-item', function () {
     name: 'simple-list-item'
 });
 
-Router.route('/user-card', function () {
-    this.render('userCardPage');
+Router.route('/user-about-box', function () {
+    this.render('userAboutBoxPage');
 },{
-    name: 'user-card'
+    name: 'user-about-box'
 });
 
 Router.route('/user-dashboard', function () {
