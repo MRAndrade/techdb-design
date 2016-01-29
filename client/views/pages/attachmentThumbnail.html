@@ -1,0 +1,25 @@
+<template name="attachmentThumbnailPage">
+	<div class="row">
+		<div class="col-xs-6 col-sm-4 col-md-2">
+			{{>attachmentThumbnail 
+				img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+				icon='fa fa-file'
+				attachmentTitle='Attachment Title'}}
+		</div>
+	</div>
+</template>
+
+
+<template name="attachmentThumbnail">
+	{{#panelContainer class='attachment-thumbnail'}}
+		{{#panelContent class='no-padding'}}
+			<img src="{{img}}" class="img-responsive" alt="attachment image">
+		{{/panelContent}}
+
+		{{#panelContent class='attachment-thumbnail-title'}}
+			<h5>
+				<i class="{{icon}}"></i> {{attachmentTitle}}
+			</h5>
+		{{/panelContent}}
+	{{/panelContainer}}
+</template>
