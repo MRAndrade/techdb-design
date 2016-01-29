@@ -14,75 +14,75 @@
 
 <template name="attachmentAboutBox">
 	{{#panelContainer class='float-e-margins attachment-about-box'}}
-			{{#panelTitle}}
+		{{#panelTitle}}
+			<a href="#">
+				<h3>
+					<i class="{{icon}}"></i>
+					{{attachmentName}}
+				</h3>
+			</a>
+			<div class="ibox-tools">
 				<a href="#">
-					<h3>
-						<i class="{{icon}}"></i>
-						{{attachmentName}}
-					</h3>
+					<i class="fa fa-pencil"></i>
 				</a>
-				<div class="ibox-tools">
+			</div>
+		{{/panelTitle}}
+
+		{{#panelContent class='no-padding'}}
+			<a href="#">
+				<img src="{{img}}" class="img-responsive" alt="attachment image">
+			</a>
+		{{/panelContent}}
+
+		{{#panelContent}}
+
+			<p>{{description}}</p>
+
+		{{/panelContent}}			
+
+		{{#panelContent}}
+			<ul>
+				<li>
+					<p>Upload Date: </p>
+					<p>{{uploadDate}}</p>
+				</li>
+				<li>
+					<p>Created by:</p>
 					<a href="#">
-						<i class="fa fa-pencil"></i>
+						<img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg" class="img-circle" alt="user">
 					</a>
-				</div>
-			{{/panelTitle}}
+				</li>
+			</ul>
+		{{/panelContent}}
 
-			{{#panelContent class='no-padding'}}
-				<a href="#">
-					<img src="{{img}}" class="img-responsive" alt="attachment image">
-				</a>
-			{{/panelContent}}
+		{{#panelContent}}
+			<h5>
+				<i class="fa fa-columns"></i> Related Projects
+			</h5>
+			<a href="#">@drone</a>
+			<a href="#">@wifi</a>
+			<a href="#">@bioniceyes</a>
+			<a href="#">@smartwatch</a>
+			<a href="#">@xtpo</a>
+			<a href="#">@smartbook</a>
+		{{/panelContent}}
+		
+		{{#panelContent}}
+			<h5>
+				<i class="fa fa-code-fork"></i> Related Technologies
+			</h5>
+			<a href="#">@drone</a>
+			<a href="#">@wifi</a>
+			<a href="#">@bioniceyes</a>
+			<a href="#">@smartwatch</a>
+		{{/panelContent}}
 
-			{{#panelContent}}
-
-				<p>{{description}}</p>
-
-			{{/panelContent}}			
-
-			{{#panelContent}}
-				<ul>
-					<li>
-						<p>Upload Date: </p>
-						<p>{{uploadDate}}</p>
-					</li>
-					<li>
-						<p>Created by:</p>
-						<a href="#">
-							<img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg" class="img-circle" alt="user">
-						</a>
-					</li>
-				</ul>
-			{{/panelContent}}
-
-			{{#panelContent}}
-				<h5>
-					<i class="fa fa-columns"></i> Related Projects
-				</h5>
-				<a href="#">@drone</a>
-				<a href="#">@wifi</a>
-				<a href="#">@bioniceyes</a>
-				<a href="#">@smartwatch</a>
-				<a href="#">@xtpo</a>
-				<a href="#">@smartbook</a>
-			{{/panelContent}}
-			
-			{{#panelContent}}
-				<h5>
-					<i class="fa fa-code-fork"></i> Related Technologies
-				</h5>
-				<a href="#">@drone</a>
-				<a href="#">@wifi</a>
-				<a href="#">@bioniceyes</a>
-				<a href="#">@smartwatch</a>
-			{{/panelContent}}
-
-			{{#panelContent}}
-				<h5>
-					<i class="fa fa-file-o"></i> Related Organizations
-				</h5>
-				<a href="#">@microsoft</a>
-				<a href="#">@apple</a>
-			{{/panelContent}}
-		{{/panelContainer}}
+		{{#panelContent}}
+			<h5>
+				<i class="fa fa-file-o"></i> Related Organizations
+			</h5>
+			<a href="#">@microsoft</a>
+			<a href="#">@apple</a>
+		{{/panelContent}}
+	{{/panelContainer}}
 </template>

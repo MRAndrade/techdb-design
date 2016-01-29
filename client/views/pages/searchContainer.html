@@ -2,30 +2,33 @@
 	{{>searchContainer}}
 </template>
 
+
+<!-- searchContainer will be the full template that will hold searchBarViewOptions and tableView OR gridView, all of it inside an ibox-->
 <template name="searchContainer">
-	{{#panelContainer class='search-container'}}
+	{{#panelContainer}}
 		{{#panelContent}}
-			<div class="row">
-				<div class="col-xs-9 col-sm-10 col-lg-11 search-column">
-					{{>searchBar}}
-				</div>
-				<div class="col-xs-3 col-sm-2 col-lg-1 view-options">
-					<button class="btn btn-default" type="button">
-						<i class="fa fa-list"></i>
-					</button>
-					<button class="btn btn-default" type="button">
-						<i class="fa fa-th"></i>
-					</button>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					
-				</div>
-			</div>
+			{{>searchBarViewOptions}}
 		{{/panelContent}}
 	{{/panelContainer}}
 </template>
+
+<!-- I'm making this template, 'cause searchAttachmentsContainer component will hold one searchBarViewOptions without an ibox-->
+<template name="searchBarViewOptions">
+	<div class="search-bar-view-options">
+		<div class="search-bar-column">
+			{{>searchBar}}
+		</div>
+		<div class="view-options-column">
+			<button class="btn btn-default" type="button">
+				<i class="fa fa-list"></i>
+			</button>
+			<button class="btn btn-default" type="button">
+				<i class="fa fa-th"></i>
+			</button>
+		</div>
+	</div>
+</template>
+
 
 <template name="tableView">
 	

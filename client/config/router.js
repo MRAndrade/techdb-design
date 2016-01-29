@@ -64,6 +64,12 @@ Router.route('/recent-updates', function () {
 	name: 'recent-updates'
 });
 
+Router.route('/search-attachments-container', function () {
+    this.render('searchAttachmentsContainer');
+},{
+    name: 'search-attachments-container'
+});
+
 Router.route('/search-container', function () {
     this.render('searchContainerPage');
 },{

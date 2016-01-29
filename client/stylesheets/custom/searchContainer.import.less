@@ -1,15 +1,31 @@
 .search-container {
-	.search-column {
-		padding-right: 0;
+	
+}
+
+
+/*This is the div that holds the .search-bar-column and .view-options-column*/
+.search-bar-view-options {
+	.flex;
+	.x-between-flex;
+	.y-center-flex;
+
+	.search-bar-column {
+		.inline-flex;
+		
+		padding-right: 8px;
+
+		/*This property makes .search-bar-column fill all the avaiable width*/
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
 	}
 
+	.view-options-column {
+		.inline-flex;
+		.x-around-flex;
 
-	.view-options {
-		.flex;
-		.x-center-flex;
-		
-		button {
-			margin-left: 5px;
-		}
+		/*Setting this so the column always keep the same size at every portview, as well as the buttons spacing*/
+		/*It also helps to flex-grow property on search-bar-column works properly*/
+		/*If by any reason the buttons size must be changed, this property must too*/
+		width: 90px;
 	}
 }
