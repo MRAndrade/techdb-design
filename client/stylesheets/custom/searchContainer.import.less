@@ -1,8 +1,9 @@
 .search-container {
 	position: relative;
 
+	/*This selector matches ONLY with an .ibox-content that is a direct child of .search-container*/
 	/*Making .ibox-content horizontal padding a bit bigger (just the one within .search-container)*/
-	.ibox-content {
+	>.ibox-content {
 		padding-left: @ibox-content-horizontal-padding-search-container; 
 		padding-right: @ibox-content-horizontal-padding-search-container;
 	}
@@ -12,7 +13,7 @@
 	}
 
 	.table-view {
-		margin-top: 25px;
+		padding-top: @padding-top-table-grid-view;
 
 		/*Selecting the action column (this is assuming that all thead th:last-child of a .table-view WILL be a action column)*/
 		thead {
@@ -20,6 +21,10 @@
 				width: 17%;
 			}
 		}
+	}
+
+	.grid-view {
+		padding-top: @padding-top-table-grid-view;
 	}
 }
 
