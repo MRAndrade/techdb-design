@@ -10,16 +10,30 @@
    	{{/panelContent}}
 	{{/panelContainer}}
 
-	<h1>Search Bar</h1>
-	{{>searchBar}}
+	<h1>Search Source</h1>
+	{{>searchSource}}
 </template>
 
 
 
-<!-- SEARCH BAR-->
-	<template name="searchBar">
-		<input class="form-control search-bar" placeholder="Search" name="search" type="text">
-	</template>
+<!-- SEARCH SOURCE-->
+<template name="searchSource">
+  <div class="row search-source">
+    <div class="col col-sm-12">
+      <div class="input-group">
+        <span class="input-group-addon">
+            <i class='fa fa-search'></i>
+        </span>
+        <input class="form-control" placeholder="Search for something..." name="search" type="text" id="search-text">
+      </div>
+    </div>
+  </div>
+  <!--<div class="row">
+    <div class="col col-xs-12 metadata" align='right'>
+      <i>took: <b>10ms</b>, total: <b>5</b> results</i>
+      </div>
+  </div>-->
+</template>
 
 
 <!-- PANELS -- >
@@ -40,3 +54,4 @@
 	     {{> UI.contentBlock}}
 	   </div>
 	</template>
+

@@ -1,25 +1,47 @@
 .search-container {
-	
+
+	/*Making .ibox-content horizontal padding a bit bigger (just the one within .search-container)*/
+	.ibox-content {
+		padding-left: @ibox-content-horizontal-padding-search-container; 
+		padding-right: @ibox-content-horizontal-padding-search-container;
+	}
+
+	.search-source-search-toggle {
+		margin: 10px 0;
+	}
+
+	.table-view {
+		margin-top: 25px;
+
+		/*Selecting the action column (this is assuming that all thead th:last-child of a .table-view WILL be a action column)*/
+		thead {
+			th:last-child {
+				width: 17%;
+			}
+		}
+	}
 }
 
 
-/*This is the div that holds the .search-bar-column and .view-options-column*/
-.search-bar-view-options {
+/*The settings bellow affect other componentes that has .search-source-search-toggle and .search-toggle-column*/
+
+/*This is the div that holds the .search-source-column and .search-toggle-column*/
+.search-source-search-toggle {
 	.flex;
 	.x-between-flex;
 	.y-center-flex;
 
-	.search-bar-column {
+	.search-source-column {
 		.inline-flex;
 		
 		padding-right: 8px;
 
-		/*This property makes .search-bar-column fill all the avaiable width*/
+		/*This property makes .search-source-column fill all the avaiable width*/
 		-webkit-flex-grow: 1;
 		flex-grow: 1;
 	}
 
-	.view-options-column {
+	.search-toggle-column {
 		.inline-flex;
 
 		button {

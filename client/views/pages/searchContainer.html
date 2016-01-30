@@ -3,29 +3,31 @@
 </template>
 
 
-<!-- searchContainer will be the full template that will hold searchBarViewOptions and tableView OR gridView, all of it inside an ibox-->
+<!-- searchContainer will be the full template that will hold searchBarSearchToggle and tableView OR gridView, all of it inside an ibox-->
 <template name="searchContainer">
 	{{#panelContainer class='search-container'}}
 		{{#panelContent}}
-			{{>searchBarViewOptions}}
+			{{>searchSourceSearchToggle}}
+			{{>tableView}}
 		{{/panelContent}}
 	{{/panelContainer}}
 </template>
 
-<!-- I'm making this template, 'cause searchAttachmentsContainer component will hold one searchBarViewOptions without an ibox-->
-<template name="searchBarViewOptions">
-	<div class="search-bar-view-options">
-		<div class="search-bar-column">
-			{{>searchBar}}
+
+<!-- I'm making this template, 'cause searchAttachmentsContainer component will hold one searchBarSearchToggle without an ibox-->
+<template name="searchSourceSearchToggle">
+	<div class="search-source-search-toggle">
+		<div class="search-source-column">
+			{{>searchSource}}
 		</div>
-		{{>viewOptionsColumn}}
+		{{>searchToggleColumn}}
 	</div>
 </template>
 
 
 <!-- Creating a template of this, 'cause it will be used on Elastic Search Results-->
-<template name="viewOptionsColumn">
-	<div class="view-options-column">
+<template name="searchToggleColumn">
+	<div class="search-toggle-column">
 		<button class="btn btn-default" type="button">
 			<i class="fa fa-list"></i>
 		</button>
@@ -37,10 +39,109 @@
 
 
 <template name="tableView">
-	
+	<div class="table-responsive table-view">
+		<table class="table table-striped table-bordered table-actions">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Country</th>
+					<th>Year</th>
+					<th>Type</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Facebook</td>
+					<td>USA</td>
+					<td>2004</td>
+					<td>Private</td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>Google</td>
+					<td>USA</td>
+					<td>1990</td>
+					<td>Private</td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{>actionButtons}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </template>
 
 <template name="gridView">
 	
 </template>
 
+
+<!-- Creating this template 'cause it will repeat a lot of times in the last <td> of each <tr>-->
+<template name="actionButtons">
+	<div class="table-action-buttons">
+		<button class="btn btn-primary btn-xs">
+			<i class='fa fa-check'></i>
+		</button>
+		<button class="btn btn-danger remove-project btn-xs">
+			<i class='fa fa-trash'></i>
+		</button>
+		<button class="btn btn-default add-project btn-xs">
+			<i class='fa fa-check'></i>
+		</button>
+	</div>
+</template>
