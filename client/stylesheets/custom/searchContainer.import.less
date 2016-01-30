@@ -1,4 +1,5 @@
 .search-container {
+	position: relative;
 
 	/*Making .ibox-content horizontal padding a bit bigger (just the one within .search-container)*/
 	.ibox-content {
@@ -47,5 +48,24 @@
 		button {
 			margin-left: 5px;
 		}
+	}
+}
+
+.btn-float {
+	.inline-flex;
+	.x-center-flex;
+	.y-center-flex;
+
+	position: absolute;
+	bottom: 1%;
+	right: 0.5%;
+
+	z-index: 1;
+	cursor: pointer;
+
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.45), 0 2px 10px 0 rgba(0,0,0,0.3);
+
+	&:hover {
+		box-shadow: 0 5px 15px rgba(0,0,0,0.55);
 	}
 }

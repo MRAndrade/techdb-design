@@ -9,6 +9,7 @@
 		{{#panelContent}}
 			{{>searchSourceSearchToggle}}
 			{{>tableView}}
+			{{>floatActionButton}}
 		{{/panelContent}}
 	{{/panelContainer}}
 </template>
@@ -144,4 +145,10 @@
 			<i class='fa fa-check'></i>
 		</button>
 	</div>
+</template>
+
+<template name="floatActionButton">
+	<button class="btn btn-success btn-circle btn-lg btn-float" type="button">
+		<i class="fa fa-plus"></i>
+	</button>
 </template>
