@@ -18,14 +18,20 @@
 		<div class="search-bar-column">
 			{{>searchBar}}
 		</div>
-		<div class="view-options-column">
-			<button class="btn btn-default" type="button">
-				<i class="fa fa-list"></i>
-			</button>
-			<button class="btn btn-default" type="button">
-				<i class="fa fa-th"></i>
-			</button>
-		</div>
+		{{>viewOptionsColumn}}
+	</div>
+</template>
+
+
+<!-- Creating a template of this, 'cause it will be used on Elastic Search Results-->
+<template name="viewOptionsColumn">
+	<div class="view-options-column">
+		<button class="btn btn-default" type="button">
+			<i class="fa fa-list"></i>
+		</button>
+		<button class="btn btn-default" type="button">
+			<i class="fa fa-th"></i>
+		</button>
 	</div>
 </template>
 

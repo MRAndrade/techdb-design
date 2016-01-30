@@ -1,0 +1,37 @@
+<template name="elasticSearchPage">
+<div class="row">
+	<div class="col-md-8">
+		{{>elasticSearch}}
+	</div>
+</div>
+</template>
+
+<template name="elasticSearch">
+	{{#panelContainer class='elastic-search'}}
+		{{#panelContent}}
+			<div class="icons-row">
+				{{>buttonIconsRow color='default' icon='fa fa-gears'}}
+				{{>buttonIconsRow color='default' icon='fa fa-columns'}}
+				{{>buttonIconsRow color='default' icon='fa fa-user'}}
+				{{>buttonIconsRow color='default' icon='fa fa-building'}}
+				{{>buttonIconsRow color='default' icon='fa fa-paperclip'}}
+			</div>
+			<div class="search-row">
+				{{>searchBar}}
+			</div>
+			<div class="results-row">
+				<h3>Results</h3>
+				{{>viewOptionsColumn}} <!-- This template is declared in searchContainer.html-->
+				<div class="results-grid">
+					
+				</div>
+			</div>
+		{{/panelContent}}
+	{{/panelContainer}}
+</template>
+
+<template name="buttonIconsRow">
+	<button class="btn btn-{{color}}">
+		<i class="{{icon}} fa-2x"></i>
+	</button>
+</template>

@@ -40,6 +40,12 @@ Router.route('/default-minor-components', function () {
     name: 'default-minor-components'
 });
 
+Router.route('/elastic-search', function () {
+    this.render('elasticSearchPage');
+},{
+    name: 'elastic-search'
+});
+
 Router.route('/main-dashboard', function () {
     this.render('mainDashboard');
 },{
