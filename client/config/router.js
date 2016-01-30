@@ -64,6 +64,12 @@ Router.route('/org-about-box', function () {
     name: 'org-about-box'
 });
 
+Router.route('/org-dashboard', function () {
+    this.render('orgDashboard');
+},{
+    name: 'org-dashboard'
+});
+
 Router.route('/recent-updates', function () {
     this.render('recentUpdatesPage');
 },{
