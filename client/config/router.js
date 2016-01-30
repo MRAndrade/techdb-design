@@ -95,7 +95,7 @@ Router.route('/user-about-box', function () {
 });
 
 Router.route('/user-dashboard', function () {
-    this.render('userDashboardPage');
+    this.render('userDashboard');
 },{
     name: 'user-dashboard'
 });
