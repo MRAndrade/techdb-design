@@ -4,5 +4,8 @@ Template.modals.events({
   }, 
   'click #userProjectPermissions': function() {
     Modal.show('userProjectPermissions');
-  } 
+  },
+  'click #userProjectPermissionsAdmin': function() {
+    Modal.show('userProjectPermissionsAdmin');
+  }
 });
