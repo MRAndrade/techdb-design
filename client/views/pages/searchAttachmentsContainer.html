@@ -14,14 +14,13 @@
 				}}
 		</div>
 		<div class="col-sm-8 col-md-8">
-			<!-- I'm just putting this code and not calling searchContainer template cause the gridView on searchAttachmentsContainer gonna have different settings,
+
+			<!-- I'm just putting this code below and not calling searchContainer template cause the gridView on searchAttachmentsContainer gonna have different settings,
 			but after all this is setted to work intelligently, just calling the searchContainer template directly will work just fine.-->
 
 			{{#panelContainer class='search-container'}}
 				{{#panelContent}}
 				{{>searchSourceSearchToggle}}
-				{{!-- You gotta choose which one will be used --}}
-					{{!-- {{>tableView th1='Name' th2='Group' th3='Last Access' th4='Status' th5='Actions'}} --}}
 					
 					<!-- Hereafter this will be just a gridView template-->
 					<div class="grid-view">

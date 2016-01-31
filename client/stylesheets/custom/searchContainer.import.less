@@ -8,10 +8,6 @@
 		padding-right: @ibox-content-horizontal-padding-search-container;
 	}
 
-	.search-source-search-toggle {
-		margin: 10px 0;
-	}
-
 	.table-view {
 		padding-top: @padding-top-table-grid-view;
 
@@ -29,25 +25,19 @@
 }
 
 
-/*The settings bellow affect other componentes that has .search-source-search-toggle and .search-toggle-column*/
-
-/*This is the div that holds the .search-source-column and .search-toggle-column*/
+/*This is the div that holds the .search-source and .search-toggle*/
 .search-source-search-toggle {
 	.flex;
 	.x-between-flex;
-	.y-center-flex;
+	.y-top-flex;
 
-	.search-source-column {
-		.inline-flex;
-		
+	margin-top: 10px;
+
+	.search-source {	
 		padding-right: 8px;
-
-		/*This property makes .search-source-column fill all the avaiable width*/
-		-webkit-flex-grow: 1;
-		flex-grow: 1;
 	}
 
-	.search-toggle-column {
+	.search-toggle {
 		.inline-flex;
 
 		button {
@@ -56,6 +46,7 @@
 	}
 }
 
+/*This is the floating action button*/
 .btn-floating {
 	.inline-flex;
 	.x-center-flex;

@@ -3,39 +3,48 @@
 </template>
 
 
-<!-- searchContainer will be the full template that will hold searchBarSearchToggle and tableView OR gridView, all of it inside an ibox-->
+<!-- SEARCHCONTAINER is the full template: an ibox with searchSourceSearchToggle and tableView OR gridView-->
 <template name="searchContainer">
 	{{#panelContainer class='search-container'}}
 		{{#panelContent}}
 			{{>searchSourceSearchToggle}}
-			{{>tableView th1='Name' th2='Group' th3='Last Access' th4='Status' th5='Actions'}}
+			{{>gridView th1='Name' th2='Group' th3='Last Access' th4='Status' th5='Actions'}}
 		{{/panelContent}}
 	{{/panelContainer}}
 </template>
 
 
-<!-- This template holds an searchSource and searchToggle without an ibox-->
+<!-- SEARCHSOURCE WITH SEARCHTOGGLE-->
 <template name="searchSourceSearchToggle">
 	<div class="search-source-search-toggle">
-		<div class="search-source-column">
-			{{>searchSource}}
+		{{>searchSource}}
+		<div class="search-toggle">
+			<button class="btn btn-default" type="button">
+				<i class="fa fa-list"></i>
+			</button>
+			<button class="btn btn-default" type="button">
+				<i class="fa fa-th"></i>
+			</button>
 		</div>
-		{{>searchToggleColumn}}
 	</div>
 </template>
 
 
-<!-- Creating a template of this, 'cause it will be used on Elastic Search Results-->
-<template name="searchToggleColumn">
-	<div class="search-toggle-column">
-		<button class="btn btn-default" type="button">
-			<i class="fa fa-list"></i>
-		</button>
-		<button class="btn btn-default" type="button">
-			<i class="fa fa-th"></i>
-		</button>
+<!-- SEARCH SOURCE-->
+<template name="searchSource">
+  <div class="search-source">
+		<div class="input-group">
+        <span class="input-group-addon">
+            <i class='fa fa-search'></i>
+        </span>
+        <input class="form-control" placeholder="Search for something..." name="search" type="text" id="search-text">
+      </div>
+      <div class="metadata" align='right'>
+      	<i>took: <b>10ms</b>, total: <b>5</b> results</i>
+      </div>
 	</div>
 </template>
+
 
 <!-- TABLE VIEW -->
 <template name="tableView">
@@ -184,7 +193,7 @@
 </template>
 
 
-<!-- Creating this template 'cause it will repeat a lot of times in the last <td> of each <tr>-->
+<!-- ACTION BUTTONS on the last <td> of each <tr>-->
 <template name="actionButtons">
 	<div class="table-action-buttons">
 		<button class="btn btn-primary btn-xs">

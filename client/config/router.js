@@ -40,10 +40,10 @@ Router.route('/dashboard-stat', function () {
 	name: 'dashboard-stat'
 });
 
-Router.route('/default-minor-components', function () {
-    this.render('defaultMinorComponentsPage');
+Router.route('/panel', function () {
+    this.render('panelPage');
 },{
-    name: 'default-minor-components'
+    name: 'panel'
 });
 
 Router.route('/elastic-search', function () {
