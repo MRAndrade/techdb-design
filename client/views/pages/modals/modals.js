@@ -1,6 +1,6 @@
 Template.modals.events({
-  'click #manageUserGroups': function() {
-    Modal.show('manageUserGroups');
+  'click #manageUserRole': function() {
+    Modal.show('manageUserRole');
   }, 
   'click #userProjectPermissions': function() {
     Modal.show('userProjectPermissions');
