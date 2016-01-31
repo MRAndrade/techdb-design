@@ -1,58 +1,83 @@
+<template name="searchAttachmentsContainerPage">
+	{{>searchAttachmentsContainer}}
+</template>
+
 <template name="searchAttachmentsContainer">
-	<div class="row">
-		<div class="col-xs-12 col-sm-7 col-md-8">
-			<div class="equal-margin">
-				{{>searchSourceSearchToggle}}
-			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-12 col-md-4">
-					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
-				</div>
-				<div class="col-xs-6 col-sm-12 col-md-4">
-					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
-				</div>
-				<div class="col-xs-6 col-sm-12 col-md-4">
-					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
-				</div>
-				<div class="col-xs-6 col-sm-12 col-md-4">
-					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
-				</div>
-				<div class="col-xs-6 col-sm-12 col-md-4">
-					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
-				</div>
-				<div class="col-xs-6 col-sm-12 col-md-4">
-					{{>attachmentThumbnail img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg' icon='fa fa-file' attachmentTitle='Attachment Title'}}
-				</div>
-			</div>			
-		</div>
-		<div class="col-xs-12 col-sm-5 col-md-4">
-			<div class="equal-margin">
-				{{>changeTab}}
-			</div>
+	<div class="row search-attachments-container">
+		<div class="col-sm-4 col-md-4">
 			{{>attachmentAboutBox
 				icon='fa fa-file'
 				attachmentName='Attachment File.png'
 				img='http://mdemaria.biz/img/fotos/imagens%20paisagem%201.jpg'
-				description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt, quis ipsam dolores dignissimos incidunt hic molestias nulla. Laborum ipsa ipsum, delectus recusandae reprehenderit nesciunt? Assumenda, explicabo, voluptatibus. Asperiores, corporis?'
+				description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nesciunt, quis ipsam dolores'
 				uploadDate='13/02/2016'
 				}}
 		</div>
+		<div class="col-sm-8 col-md-8">
+			<!-- I'm just putting this code and not calling searchContainer template cause the gridView on searchAttachmentsContainer gonna have different settings,
+			but after all this is setted to work intelligently, just calling the searchContainer template directly will work just fine.-->
+
+			{{#panelContainer class='search-container'}}
+				{{#panelContent}}
+				{{>searchSourceSearchToggle}}
+				{{!-- You gotta choose which one will be used --}}
+					{{!-- {{>tableView th1='Name' th2='Group' th3='Last Access' th4='Status' th5='Actions'}} --}}
+					
+					<!-- Hereafter this will be just a gridView template-->
+					<div class="grid-view">
+						<div class="row">
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+							<div class="col-xs-6 col-md-4">
+								{{>attachmentThumbnail 
+									img='http://wallpaper.ultradownloads.com.br/73323_Papel-de-Parede-Paisagem-azul_1440x900.jpg'
+									icon='fa fa-file'
+									attachmentTitle='Attachment Title'}}
+							</div>
+						</div>
+					</div>
+				{{/panelContent}}
+			{{/panelContainer}}
+		</div>
 	</div>
 </template>
-
-<template name="changeTab">
-	<div class="change-tab">
-		<button class="btn btn-default" type="button">Information</button>
-		<button class="btn btn-default" type="button">Recent Updates</button>
-	</div>
-</template>
-
-<!-- Grid settings:
-	Large: searchBar 8 - attachmentThumbnail 4 - AboutBox 4 (i think that's ok)
-	Medium: searchBar 8 - attachmentThumbnail 4 - AboutBox 4 (i think that's ok)
-	Small (here comes the conflict):
-		Option 1: searchBar 7 - AboutBox 5 - attachmentThumbnail 6 (Current One, the more acceptable one i think)
-		Option 2: searchBar 6 - AboutBox 6 - attachmentThumbnail 6 (really dont like it)
-		Option 3: searchBar 6 - AboutBox 6 - attachmentThumbnail 12 (just ok)
-	X-Small: searchBar 12 - AboutBox 12 - attachmentThumbnail 12 (i think that's ok)
--->
