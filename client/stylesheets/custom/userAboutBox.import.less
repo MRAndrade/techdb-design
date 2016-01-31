@@ -1,33 +1,29 @@
 .user-about-box {
-	/*Settings for 'update photo' icon*/
+	/*Settins for the animation on Update Profile Picture*/
 	.profile-photo {
 		position: relative;
+	}
+	
+	.update-picture {
+		.flex;
+		.y-center-flex;
+		position: absolute;
+
+		bottom:0;
+		padding: 10px;
+		opacity: 0.7;
 
 		a {
-			.flex;
-			.y-center-flex;
-
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			padding: 10px;
-
-			text-decoration: none;
-			opacity: 0.7;
-			background-color: #000;
-		}
-
-		i {
-			color: @update-picture-icon-color-user-about-box;
-		}
-		
-		p {
-			display: inline-block;
-			margin: 0 5px;
 			color: #fff;
-			font-weight: 500;
+			font-weight: 600;
+			display: none;
 		}
 
+	}
+
+	i#update-picture-icon {
+		color: @update-picture-icon-color-user-about-box;
+		margin-right: 10px;
 	}
 
 	/*Settings for the data list*/
