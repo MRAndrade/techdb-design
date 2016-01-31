@@ -72,3 +72,24 @@
   -webkit-flex-direction: column;
   flex-direction: column;
 }
+
+
+.modal-item {
+  /*this will select only the <td>'s of the first .{{item-name}}-item*/
+    &:first-of-type {
+      td {
+        border-top: none;
+      }
+    }
+
+    td {
+      vertical-align: middle;
+    }
+
+    /* td:first-child {width: @img-size-{{item-name}}-item;} Possible configuration if want to set more space for name*/ 
+
+    /*This is assuming that the the last td is the role buttons*/
+    td:last-child {
+      text-align: right;
+    }
+}

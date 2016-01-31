@@ -1,3 +1,41 @@
 <template name="userProjectPermissions">
+	<div class="modal inmodal user-project-permissions">
+    <div class="modal-dialog">
+      <div class="modal-content animated fadeIn">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <i class="fa fa-columns modal-icon"></i>
+          <h4 class="modal-title">User Project Permissions</h4>
+        </div>
+        <div class="modal-body">
+          {{>searchSource}}
+          <table class="table table-striped">
+          	<tbody>
+          		{{>userProjectPermissionsItem projectName='Project 1'}}
+          		{{>userProjectPermissionsItem projectName='Project long name'}}
+          		{{>userProjectPermissionsItem projectName='Project long long long long name'}}
+          		{{>userProjectPermissionsItem projectName='Project Hi'}}
+          	</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
+<template name="userProjectPermissionsItem">
+	<tr class="user-project-permissions-item">
+		<td>
+			<img src="https://octodex.github.com/images/octobiwan.jpg" alt="Project Image">
+		</td>
+		<td>
+			{{projectName}}
+		</td>
+		<td>
+			<i class="fa fa-close"></i>
+		</td>
+	</tr>
 </template>
