@@ -16,6 +16,12 @@ Router.route('/attachment-about-box', function () {
     name: 'attachment-about-box'
 });
 
+Router.route('/attachment-dashboard', function () {
+    this.render('attachmentDashboard');
+},{
+    name: 'attachment-dashboard'
+});
+
 Router.route('/attachment-thumbnail', function () {
     this.render('attachmentThumbnailPage');
 },{
